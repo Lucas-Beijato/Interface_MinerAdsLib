@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "MinerAdsLib",
+  "description": "An extension for traffic managers.",
+  "version": "3.0",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "./imgs/capa.png"
+  },
+  "icons": {
+    "16": "imgs/capa16.png",
+    "32": "imgs/capa32.png",
+    "48": "imgs/capa48.png",
+    "128": "imgs/capa128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ]
+}
