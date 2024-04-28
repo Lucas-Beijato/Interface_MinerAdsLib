@@ -11,3 +11,5 @@ export const StatusMetaServices = writable({
     Ad_Library: "Loading...",
     Pub_Date_AL: "Loading...",
 })
+
+export const Token = writable("")

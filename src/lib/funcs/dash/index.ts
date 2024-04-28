@@ -1,4 +1,4 @@
-import { Filters } from "./filters";
+import { Filters } from "../../filters/filters";
 import { updateStatusBarMessage } from "$lib/funcs";
 import { getTabs } from "$lib/funcs";
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { ValidateTokenInputFront } from "./funcs";
+  import { ValidateTokenInputFront } from "$lib/funcs/auth/token";
 </script>
 
 <div
