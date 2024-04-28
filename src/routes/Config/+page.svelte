@@ -39,7 +39,7 @@
 <div class="w-80 h-fit flex flex-col justify-center items-center rounded-md">
   <div class="flex justify-start items-start mb-2 w-full">
     <button
-      class="text-white font-bold p-2 bg-cust_light_grey1 rounded-md"
+      class="text-white font-bold p-2 bg-cust_light_grey1 rounded-md transition transform duration-150 hover:scale-105"
       on:click={ToGoBack}>Voltar</button
     >
   </div>
@@ -47,7 +47,7 @@
     <h3 class="text-white font-bold">Token Ativo:</h3>
     <p class="text-white break-words mb-2">{token}</p>
     <button
-      class="bg-cust_orange rounded-sm p-1 text-white font-bold"
+      class="bg-cust_orange rounded-sm p-1 text-white font-bold transition transform duration-150 hover:scale-105"
       on:click={Reset_Token}>Reset Token</button
     >
   </div>

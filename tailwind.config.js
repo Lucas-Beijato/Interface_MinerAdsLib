@@ -3,13 +3,10 @@ export default {
   content: ['./src/**/*.{html,js,svelte,ts}'],
   theme: {
     extend: {
+      animation: {
+        'spin-slow': 'spin 3s linear infinite',
+      },
       colors: {
-        Cust_OxfordBlue: "#020122",
-        Cust_GiantsOrange: "#FF521B",
-        Cust_SandyBrown: "#FC9E4F",
-        Cust_Flax: "#EDD382",
-        Cust_Vanilla: "#F2F3AE",
-
         cust_dark_grey: "#141414",
         cust_orange: "#f44336",
         cust_light_grey1: "#292929",
