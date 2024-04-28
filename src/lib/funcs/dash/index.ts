@@ -25,8 +25,7 @@ export async function ExecScript(e: any) {
       .value;
     const INPUTURL = (<HTMLInputElement>document.querySelector("#URLinput"))
       .value;
-    // const INPUTBUTTON = (<HTMLInputElement>(document.querySelector("#buttonTitle"))).value;
-
+      
     chrome.scripting.executeScript({
       target: { tabId: tabNumber },
       func: Filters,

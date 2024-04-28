@@ -2,43 +2,13 @@
   import "../app.css";
   import StatusBar from "$lib/components/statusBar/statusBar.svelte";
   import { AuthValidation } from "$lib/funcs/auth/token";
-  import { Token } from "$lib/global_state";
   import { onMount } from "svelte";
-
-  async function setDateToValidate() {
-    const d = new Date();
-      const nextValidation: Date = new Date(
-        d.getFullYear(),
-        d.getMonth(),
-        d.getDate(),
-        d.getHours() + 2
-      );
-      await chrome.storage.local.set({
-        DateCronJobValidateToken: nextValidation.toString(),
-      });
-  }
-
-  async function SetTokenState() {
-    let token = await chrome.storage.local.get(["TokenMinerAdsLib"]);
-    Token.set(token.TokenMinerAdsLib)
-  }
+  import { SetTokenState, Verify_date_to_validate } from "$lib/funcs";
 
   onMount(async () => {
     await AuthValidation();
     await SetTokenState();
-    
-    const da = await chrome.storage.local.get(["DateCronJobValidateToken"]);
-    if (da.DateCronJobValidateToken === undefined || da.DateCronJobValidateToken === "") {
-      await setDateToValidate()
-    }
- 
-    const now = new Date();
-    const NextDate: Date = new Date(da.DateCronJobValidateToken);
-
-    if (now >= NextDate) {
-      await setDateToValidate()
-    }
-    
+    await Verify_date_to_validate();
   });
 
 </script>

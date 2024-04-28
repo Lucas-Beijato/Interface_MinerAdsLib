@@ -4,7 +4,7 @@
   "description": "An extension for traffic managers.",
   "version": "3.0",
   "action": {
-    "default_popup": "Auth.html",
+    "default_popup": "Dash.html",
     "default_icon": "./imgs/capa.png"
   },
   "icons": {
